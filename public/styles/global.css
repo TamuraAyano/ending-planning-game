@@ -1,0 +1,105 @@
+/* ホーム画面のデザイン */
+.home-container, .container, .card5-Container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #007ACC, #00A86B);
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+p {
+    white-space: normal; /* 改行を有効にする */
+    overflow-wrap: break-word; /* コンテンツがはみ出る場合に改行 */
+    word-break: normal; /* 自然な単語区切り */
+}
+
+.hero-section {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 柔軟な列配置 */
+    gap: 20px; /* カード間の余白をgapで管理 */
+    width: 100%;
+    max-width: 800px; /*最大幅を制限 */
+    margin: 0 auto; /* selection自体を中央寄せ */
+}
+
+.card {
+    width: 90%;
+    max-width: 400px;
+    min-width: 150px;
+    border: 2px solid #006A4E;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    white-space: pre-line; /* 改行を反映 */
+    margin: 0 auto; /* 中央寄せ */
+}
+.card:hover {
+    background-color: #007ACC;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #006A4E;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #008CBA;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 25px 15px; /* カード内余白調整 */
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        height: auto; /* 高さ自動調整でタイトル表示 */
+        padding-top: 20px; /* タイトルスペース確保 */
+    }
+
+    h1 {
+        font-size: 1.4rem; /* スマホ用タイトルサイズ調整 */
+        margin-bottom: 15px; /* タイトルとカード間の余白 */
+        word-break: break-word; /* 単語内でも改行可能に */
+    }
+
+    .selection {
+        grid-template-columns: 1fr; /* 縦並び */
+        gap: 15px; /* カード間の余白 */
+    }
+
+    .card {
+        width: 95%; /* スマホでは画面幅を最大活用 */
+    }
+}

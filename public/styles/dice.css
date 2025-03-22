@@ -1,0 +1,48 @@
+/* サイコロ画面のcss*/
+.dice-container {
+    text-align: center;
+}
+
+#dice-image {
+    width: 250px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.dice-area {
+    margin-top: 30px;
+}
+
+#rollButton{
+    margin-top: 30px;
+}
+
+#care-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#care-cost-message {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes rolling {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 767px) {
+    #dice-image {
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>結果表示</title>
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/accordion.css">
+</head>
+<body>
+
+<!-- PC表示用 (デフォルトは表示、スマホでは非表示) -->
+<div class="result-container pc-view">
+    <h2 class="saving-amount">あなたの必要貯蓄額は <span id="totalSavings_pc">XX万円</span> です</h2>
+    <table class="age-table">
+        <thead>
+            <tr>
+                <th>年代</th><th>60代</th><th>70代</th><th>80代</th><th>90代</th><th>100代</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>スタート/繰越金</td><td class="age-60 start-money"></td><td class="age-70 start-money"></td><td class="age-80 start-money"></td><td class="age-90 start-money"></td><td class="age-100 start-money"></td></tr>
+            <tr><td>10年間の収入</td><td class="age-60 income"></td><td class="age-70 income"></td><td class="age-80 income"></td><td class="age-90 income"></td><td class="age-100 income"></td></tr>
+            <tr><td>収入総額</td><td class="age-60 total-income"></td><td class="age-70 total-income"></td><td class="age-80 total-income"></td><td class="age-90 total-income"></td><td class="age-100 total-income"></td></tr>
+            <tr><td>10年間の生活費</td><td class="age-60 living-expenses"></td><td class="age-70 living-expenses"></td><td class="age-80 living-expenses"></td><td class="age-90 living-expenses"></td><td class="age-100 living-expenses"></td></tr>
+            <tr><td>老人ホーム入居費用</td><td class="age-60 home-cost"></td><td class="age-70 home-cost"></td><td class="age-80 home-cost"></td><td class="age-90 home-cost"></td><td class="age-100 home-cost"></td></tr>
+            <tr><td>10年間の娯楽</td><td class="age-60 entertainment"></td><td class="age-70 entertainment"></td><td class="age-80 entertainment"></td><td class="age-90 entertainment"></td><td class="age-100 entertainment"></td></tr>
+            <tr><td>10年間の保険</td><td class="age-60 insurance"></td><td class="age-70 insurance"></td><td class="age-80 insurance"></td><td class="age-90 insurance"></td><td class="age-100 insurance"></td></tr>
+            <tr><td>支出総額</td><td class="age-60 total-expenses"></td><td class="age-70 total-expenses"></td><td class="age-80 total-expenses"></td><td class="age-90 total-expenses"></td><td class="age-100 total-expenses"></td></tr>
+            <tr><td>ライフイベントの額</td><td class="age-60 life-event"></td><td class="age-70 life-event"></td><td class="age-80 life-event"></td><td class="age-90 life-event"></td><td class="age-100 life-event"></td></tr>
+            <tr><td>残高</td><td class="age-60 balance"></td><td class="age-70 balance"></td><td class="age-80 balance"></td><td class="age-90 balance"></td><td class="age-100 balance"></td></tr>
+        </tbody>
+    </table>
+    <button class="finish-button">ゲームを終了する</button>
+</div>
+
+<!-- スマホ表示用 (デフォルトは非表示、スマホでは表示) -->
+<div class="result-container mobile-view">
+    <h2 class="saving-amount">あなたの必要貯蓄額は<br><span id="totalSavings_mobile">XX万円</span> です</h2>
+    <button class="finish-button">ゲームを終了する</button>
+
+    <div class="accordion-container">
+        <!-- 各年代のアコーディオン -->
+        <div class="accordion-item" data-age="60">
+            <button class="accordion-btn">60代の内訳を見る</button>
+            <div class="accordion-content">
+                <table class="age-table">
+                    <tr><th>費用項目</th><th>金額</th></tr>
+                    <tr><td>スタート/繰越金</td><td class="age-60 start-money"></td></tr>
+                    <tr><td>10年間の収入</td><td class="age-60 income"></td></tr>
+                    <tr><td>収入総額</td><td class="age-60 total-income"></td></tr>
+                    <tr><td>10年間の生活費</td><td class="age-60 living-expenses"></td></tr>
+                    <tr><td>老人ホーム入居費用</td><td class="age-60 home-cost"></td></tr>
+                    <tr><td>10年間の娯楽</td><td class="age-60 entertainment"></td></tr>
+                    <tr><td>10年間の保険</td><td class="age-60 insurance"></td></tr>
+                    <tr><td>支出総額</td><td class="age-60 total-expenses"></td></tr>
+                    <tr><td>ライフイベントの額</td><td class="age-60 life-event"></td></tr>
+                    <tr><td>残高</td><td class="age-60 balance"></td></tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 70代 -->
+        <div class="accordion-item" data-age="70">
+            <button class="accordion-btn">70代の内訳を見る</button>
+            <div class="accordion-content">
+                <table class="age-table">
+                    <tr><th>費用項目</th><th>金額</th></tr>
+                    <tr><td>スタート/繰越金</td><td class="age-70 start-money"></td></tr>
+                    <tr><td>10年間の収入</td><td class="age-70 income"></td></tr>
+                    <tr><td>収入総額</td><td class="age-70 total-income"></td></tr>
+                    <tr><td>10年間の生活費</td><td class="age-70 living-expenses"></td></tr>
+                    <tr><td>老人ホーム入居費用</td><td class="age-70 home-cost"></td></tr>
+                    <tr><td>10年間の娯楽</td><td class="age-70 entertainment"></td></tr>
+                    <tr><td>10年間の保険</td><td class="age-70 insurance"></td></tr>
+                    <tr><td>支出総額</td><td class="age-70 total-expenses"></td></tr>
+                    <tr><td>ライフイベントの額</td><td class="age-70 life-event"></td></tr>
+                    <tr><td>残高</td><td class="age-70 balance"></td></tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 80代 -->
+        <div class="accordion-item" data-age="80">
+            <button class="accordion-btn">80代の内訳を見る</button>
+            <div class="accordion-content">
+                <table class="age-table">
+                    <tr><th>費用項目</th><th>金額</th></tr>
+                    <tr><td>スタート/繰越金</td><td class="age-80 start-money"></td></tr>
+                    <tr><td>10年間の収入</td><td class="age-80 income"></td></tr>
+                    <tr><td>収入総額</td><td class="age-80 total-income"></td></tr>
+                    <tr><td>10年間の生活費</td><td class="age-80 living-expenses"></td></tr>
+                    <tr><td>老人ホーム入居費用</td><td class="age-80 home-cost"></td></tr>
+                    <tr><td>10年間の娯楽</td><td class="age-80 entertainment"></td></tr>
+                    <tr><td>10年間の保険</td><td class="age-80 insurance"></td></tr>
+                    <tr><td>支出総額</td><td class="age-80 total-expenses"></td></tr>
+                    <tr><td>ライフイベントの額</td><td class="age-80 life-event"></td></tr>
+                    <tr><td>残高</td><td class="age-80 balance"></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 90代 -->
+        <div class="accordion-item" data-age="90">
+            <button class="accordion-btn">90代の内訳を見る</button>
+            <div class="accordion-content">
+                <table class="age-table">
+                    <tr><th>費用項目</th><th>金額</th></tr>
+                    <tr><td>スタート/繰越金</td><td class="age-90 start-money"></td></tr>
+                    <tr><td>10年間の収入</td><td class="age-90 income"></td></tr>
+                    <tr><td>収入総額</td><td class="age-90 total-income"></td></tr>
+                    <tr><td>10年間の生活費</td><td class="age-90 living-expenses"></td></tr>
+                    <tr><td>老人ホーム入居費用</td><td class="age-90 home-cost"></td></tr>
+                    <tr><td>10年間の娯楽</td><td class="age-90 entertainment"></td></tr>
+                    <tr><td>10年間の保険</td><td class="age-90 insurance"></td></tr>
+                    <tr><td>支出総額</td><td class="age-90 total-expenses"></td></tr>
+                    <tr><td>ライフイベントの額</td><td class="age-90 life-event"></td></tr>
+                    <tr><td>残高</td><td class="age-90 balance"></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 100代 -->
+        <div class="accordion-item" data-age="100">
+            <button class="accordion-btn">100代の内訳を見る</button>
+            <div class="accordion-content">
+                <table class="age-table">
+                    <tr><th>費用項目</th><th>金額</th></tr>
+                    <tr><td>スタート/繰越金</td><td class="age-100 start-money"></td></tr>
+                    <tr><td>10年間の収入</td><td class="age-100 income"></td></tr>
+                    <tr><td>収入総額</td><td class="age-100 total-income"></td></tr>
+                    <tr><td>10年間の生活費</td><td class="age-100 living-expenses"></td></tr>
+                    <tr><td>老人ホーム入居費用</td><td class="age-100 home-cost"></td></tr>
+                    <tr><td>10年間の娯楽</td><td class="age-100 entertainment"></td></tr>
+                    <tr><td>10年間の保険</td><td class="age-100 insurance"></td></tr>
+                    <tr><td>支出総額</td><td class="age-100 total-expenses"></td></tr>
+                    <tr><td>ライフイベントの額</td><td class="age-100 life-event"></td></tr>
+                    <tr><td>残高</td><td class="age-100 balance"></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="/scripts/accordion.js"></script>
+  <script src="/scripts/resultDisplay.js"></script>
+
+</body>
+</html>

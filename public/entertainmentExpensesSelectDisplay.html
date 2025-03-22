@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10年間の娯楽費選択</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/card5Display.css">
+</head>
+<body>
+
+    <div class="container card5-Container">
+        <h1>希望する娯楽費（月額）を選択してください</h1>
+
+        <!-- 1行目 (2列) -->
+        <div class="selection selection-row top-row">
+            <div class="card entertainmentCard" id="noEntertainment">
+                <h2>0円(娯楽無し)</h2>
+            </div>
+            <div class="card entertainmentCard" id="month5000Entertainment">
+                <h2>5000円</h2>
+            </div>
+        </div>
+
+        <!-- 2行目 (3列) -->
+        <div class="selection selection-row bottom-row">
+            <div class="card entertainmentCard" id="month10000Entertainment">
+                <h2>10000円</h2>
+            </div>
+            <div class="card entertainmentCard" id="month20000Entertainment">
+                <h2>20000円</h2>
+            </div>
+            <div class="card entertainmentCard" id="month40000Entertainment">
+                <h2>40000円</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/scripts/entertainmentExpensesSelect.js"></script>
+</body>
+</html>

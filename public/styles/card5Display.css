@@ -1,0 +1,17 @@
+/* 1行目: 2列配置 */
+.top-row {
+    grid-template-columns: repeat(2, 1fr);  /* 2列均等配置 */
+    margin-bottom: 20px;
+}
+
+/* 2行目: 3列配置 */
+.bottom-row {
+    grid-template-columns: repeat(3, 1fr); /* 3列均等配置 */
+}
+
+/* スマホ対応: 縦並び */
+@media (max-width: 767px) {
+    .top-row, .bottom-row {
+        grid-template-columns: 1fr; /* 全て縦並び */
+    }
+}

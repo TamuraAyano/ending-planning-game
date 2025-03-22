@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイコロを振る</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/dice.css">
+</head>
+<body>
+
+    <div class="container dice-container">
+        <h1 id="care-title">介護が必要になりました!</h1>
+        <p id="care-cost-message">サイコロを振って、介護場所を決めましょう</p>
+
+        <div class="dice-area">
+            <img id="dice-image" src="/assets/dice1.png" alt="サイコロの目">
+        </div>
+
+        <!-- サービス水準選択（最初は非表示） -->
+        <div class="hidden selection">
+            <div class="card lifeLevelCard" id="low-life" data-cost="125000">
+                <h2>節約</h2>
+                <p>入居費500万</p>
+            </div>
+            <div class="card lifeLevelCard" id="standard-life" data-cost="140000">
+                <h2>普通</h2>
+                <p>入居費1000万</p>
+            </div>
+            <div class="card lifeLevelCard" id="premium-life" data-cost="165000">
+                <h2>贅沢</h2>
+                <p>入居費2000万</p>
+            </div>
+        </div>
+
+        <button id="rollButton">サイコロを振る</button>
+        <button id="nextButton" class="hidden">次へ進む</button>
+    </div>
+
+    <script src="/scripts/homeEnter.js"></script>
+
+</body>
+</html>
+

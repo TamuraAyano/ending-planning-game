@@ -1,0 +1,136 @@
+/* アコーディオンのデザイン */
+/* 全体のレイアウト */
+.result-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 貯蓄額の表示 */
+.saving-amount {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ボタンデザイン */
+.finish-button {
+    margin: 20px;
+    padding: 10px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.finish-button:hover {
+    background-color: #005F99;
+}
+
+/* アコーディオンボタン */
+.accordion-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.accordion-btn:hover {
+    background-color: #005F99;
+}
+
+/* アコーディオンの中身 */
+.accordion-content {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 開いた時 */
+.accordion-content.open {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+}
+
+/* テーブルのスタイル */
+.age-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* テーブルのヘッダー */
+.age-table th {
+    background: #007ACC;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* テーブルのセル */
+.age-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* 偶数行の背景色 */
+.age-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+/* 初期設定：PC表示を隠してアコーディオン表示 */
+.pc-view {
+    display: none;
+  }
+  
+  .mobile-view {
+    display: block;
+  }
+  
+  /* PC画面（タブレット・PC） */
+  @media (min-width: 768px) {
+    .pc-view {
+      display: block;
+    }
+  
+    .mobile-view {
+      display: none;
+    }
+  }
+  
+  /* スマホで縦向き表示時 (アコーディオンを表示) */
+  @media (max-width: 767px) and (orientation: portrait) {
+    .pc-view {
+      display: none;
+    }
+  
+    .mobile-view {
+      display: block;
+    }
+  }
+  
+  /* スマホで横向き表示時 (PC用テーブル表示) */
+  @media (max-width: 767px) and (orientation: landscape) {
+    .pc-view {
+      display: block;
+    }
+  
+    .mobile-view {
+      display: none;
+    }
+  }
+  
+  
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結果表示</title>
+    <link rel="stylesheet" href="/styles/accordion.css">
+</head>
+<body>
+
+    <div class="result-container">
+        <h2 class="saving-amount">あなたの貯蓄額は <span id="totalSavings">XX円</span> です</h2>
+    
+        <button class="toggle-button">各年代の内訳を見る</button>
+    
+        <div class="accordion-container">
+            <!-- 60代 -->
+            <div class="accordion-item">
+                <button class="accordion-btn">60代</button>
+                <div class="accordion-content">
+                    <table class="age-table">
+                        <tr><th>費用項目</th><th>金額</th></tr>
+                        <tr><td>スタート/繰越金</td><td>0円</td></tr>
+                        <tr><td>10年間の収入</td><td>500万円</td></tr>
+                        <tr><td>収入総額</td><td>500万円</td></tr>
+                        <tr><td>10年間の生活費</td><td>300万円</td></tr>
+                        <tr><td>老人ホーム入居費用</td><td>0円</td></tr>
+                        <tr><td>10年間の娯楽</td><td>100万円</td></tr>
+                        <tr><td>10年間の保険</td><td>50万円</td></tr>
+                        <tr><td>支出総額</td><td>450万円</td></tr>
+                        <tr><td>ライフイベントの額</td><td>-30万円</td></tr>
+                        <tr><td>残高</td><td>200万円</td></tr>
+                    </table>
+                </div>
+            </div>
+    
+            <!-- 70代 -->
+            <div class="accordion-item">
+                <button class="accordion-btn">70代</button>
+                <div class="accordion-content">
+                    <table class="age-table">
+                        <tr><th>費用項目</th><th>金額</th></tr>
+                        <tr><td>スタート/繰越金</td><td>200万円</td></tr>
+                        <tr><td>10年間の収入</td><td>400万円</td></tr>
+                        <tr><td>収入総額</td><td>600万円</td></tr>
+                        <tr><td>10年間の生活費</td><td>350万円</td></tr>
+                        <tr><td>老人ホーム入居費用</td><td>0円</td></tr>
+                        <tr><td>10年間の娯楽</td><td>120万円</td></tr>
+                        <tr><td>10年間の保険</td><td>60万円</td></tr>
+                        <tr><td>支出総額</td><td>530万円</td></tr>
+                        <tr><td>ライフイベントの額</td><td>-50万円</td></tr>
+                        <tr><td>残高</td><td>170万円</td></tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 80代～100代も同様に追加 -->
+        </div>
+    </div>
+
+    <script src="/scripts/accordion.js"></script>
+
+</body>
+</html>
+
