@@ -76,8 +76,7 @@ document.getElementById("rollButton").addEventListener("click", function () {
             dice.style.animation = "";
 
             // 1〜6のランダムな目を取得
-            //const diceNum = Math.floor(Math.random() * 6) + 1;
-            const diceNum = 6;
+            const diceNum = Math.floor(Math.random() * 6) + 1;
             dice.src = `/assets/dice${diceNum}.png`; // サイコロの画像を変更
 
             // UIを初期化
