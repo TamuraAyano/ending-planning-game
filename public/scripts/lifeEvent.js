@@ -13,8 +13,8 @@ let currentAge = parseInt(localStorage.getItem("currentAge"), 10) || 60;
 let currentAgeKey = `${currentAge}代`; // "60代", "70代", etc.
 
 const insuranceCoveredEvents = [
-    "地震の被害（軽）", "地震の被害（重）", "洪水の被害", "火事の被害",
-    "自動車事故（軽）", "自動車事故（重）", "病気の治療"
+    "小地震の被害", "大地震の被害", "洪水の被害", "火事の被害",
+    "軽い自動車事故", "重い自動車事故", "病気の治療"
 ];
 
 const eventOutcomes = [
