@@ -92,11 +92,10 @@ button.active {
     .container {
         height: auto; /* 高さ自動調整でタイトル表示 */
         padding-top: 20px; /* タイトルスペース確保 */
-        justify-content: flex-start;
     }
 
     h1 {
-        font-size: 1.6rem; /* スマホ用タイトルサイズ調整 */
+        font-size: 1.5rem; /* スマホ用タイトルサイズ調整 */
         margin-bottom: 15px; /* タイトルとカード間の余白 */
         word-break: break-word; /* 単語内でも改行可能に */
     }
