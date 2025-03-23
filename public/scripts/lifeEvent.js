@@ -94,7 +94,6 @@ function flipCard() {
         document.getElementById("event-title").style.display = "none";;
 
         eventText.textContent = event.text;
-        //eventMessage.textContent = `ライフイベント負担額は${finalChange.toLocaleString()}万円です！`;
         eventMessage.innerHTML = `<span class="label">ライフイベントの結果は</span><span class="amount">${finalChange.toLocaleString()}万円です！</span>`;
 
         if (insuranceApplied) {
