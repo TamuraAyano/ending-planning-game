@@ -3,6 +3,15 @@
     text-align: center;
 }
 
+.event-container p {
+    font-size: 1.8rem;
+}
+
+#insuranceMessage {
+    font-weight: normal;
+    font-size: 1.3rem;
+  }
+
 .eventCard {
     width: 250px;
     height: 350px;
@@ -43,7 +52,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: black; /* テキストの色（裏面のデザインに合わせて変更） */
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
     width: 90%; /* カードの中央に収める */
@@ -58,12 +67,20 @@
 }
 
 @media (max-width: 767px) {
+    .event-container h1 {
+        font-size: 2rem;
+    }
+
+    .event-container .label {
+        display: block;
+    }
+
     .eventCard {
-        width: 150px;
-        height: 200px;
+        width: 180px;
+        height: 230px;
     }
 
     .card-front p {
-        font-size: 18px;
+        font-size: 22px;
     }
 }

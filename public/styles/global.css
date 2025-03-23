@@ -17,10 +17,16 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 2.0rem;
+}
+
 p {
     white-space: normal; /* 改行を有効にする */
     overflow-wrap: break-word; /* コンテンツがはみ出る場合に改行 */
     word-break: normal; /* 自然な単語区切り */
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .hero-section {
@@ -64,7 +70,7 @@ p {
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     background-color: #4CAF50;
     color: white;
     border: 2px solid #006A4E;

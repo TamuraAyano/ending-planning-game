@@ -17,14 +17,16 @@
     margin-top: 30px;
 }
 
+#nextButton {
+    margin-top: 30px;
+}
+
 #care-title {
-    font-size: 24px;
-    font-weight: bold;
     margin-top: 20px;
 }
 
 #care-cost-message {
-    font-size: 18px;
+    font-size: 1.6rem;
     margin-top: 10px;
 }
 
@@ -41,6 +43,10 @@
 }
 
 @media (max-width: 767px) {
+    #care-title {
+        font-size: 2rem; /* スマホ用に文字バランス調整 */
+        margin-top: 20px;
+    }
     #dice-image {
         width: 100px;
         height: 100px;

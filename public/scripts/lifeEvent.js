@@ -18,19 +18,19 @@ const insuranceCoveredEvents = [
 ];
 
 const eventOutcomes = [
-     { text: "地震の被害（軽）", change: -500 },
-     { text: "地震の被害（重）", change: -1000 },
+     { text: "小地震の被害", change: -500 },
+     { text: "大地震の被害", change: -1000 },
      { text: "洪水の被害", change: -300 },
      { text: "火事の被害", change: -500 },
-     { text: "自動車事故（軽）", change: -30 },
-     { text: "自動車事故（重）", change: -100 },
+     { text: "軽い自動車事故", change: -30 },
+     { text: "重い自動車事故", change: -100 },
      { text: "病気の治療", change: -100 },
-     { text: "住宅のリフォーム", change: -300 },
-     { text: "詐欺（軽）", change: -200 },
-     { text: "詐欺（重）", change: -300 },
+     { text: "住宅リフォーム", change: -300 },
+     { text: "少額の詐欺", change: -200 },
+     { text: "高額の詐欺", change: -300 },
      { text: "泥棒の被害", change: -100 },
-     { text: "宝くじ当選（軽）", change: 50 },
-     { text: "宝くじ当選（重）", change: 100 },
+     { text: "少額宝くじ当選", change: 50 },
+     { text: "高額宝くじ当選", change: 100 },
      { text: "懸賞で当選", change: 10 },
      { text: "子からの仕送り", change: 10 },
      { text: "へそくり発見！", change: 500 }
@@ -90,11 +90,15 @@ function flipCard() {
 
         localStorage.setItem("financialData", JSON.stringify(financialData));
 
+        // カード表示後はタイトルを差し替える
+        document.getElementById("event-title").style.display = "none";;
+
         eventText.textContent = event.text;
-        eventMessage.textContent = `ライフイベント負担額: ${finalChange.toLocaleString()}万円`;
+        //eventMessage.textContent = `ライフイベント負担額は${finalChange.toLocaleString()}万円です！`;
+        eventMessage.innerHTML = `<span class="label">ライフイベントの結果は</span><span class="amount">${finalChange.toLocaleString()}万円です！</span>`;
 
         if (insuranceApplied) {
-            insuranceMessage.textContent = "保険により300万円分補償されました！";
+            insuranceMessage.textContent = "※保険で300万円分補償されました";
             eventMessage.insertAdjacentElement("afterend", insuranceMessage);
         } else {
             insuranceMessage.textContent = "";
