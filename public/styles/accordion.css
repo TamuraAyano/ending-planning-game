@@ -60,7 +60,7 @@
 .accordion-content.open {
     display: block;
     opacity: 1;
-    max-height: 500px;
+    max-height: none;
     margin-bottom: 20px;
 }
 
