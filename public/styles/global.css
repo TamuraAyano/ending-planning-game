@@ -95,7 +95,7 @@ button.active {
     }
 
     h1 {
-        font-size: 1.5rem; /* スマホ用タイトルサイズ調整 */
+        font-size: 1.4rem; /* スマホ用タイトルサイズ調整 */
         margin-bottom: 15px; /* タイトルとカード間の余白 */
         word-break: break-word; /* 単語内でも改行可能に */
     }
