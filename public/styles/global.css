@@ -1,4 +1,10 @@
 /* ホーム画面のデザイン */
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+  }
+
 .home-container, .container, .card5-Container{
     text-align: center;
     display: flex;
@@ -25,12 +31,18 @@ p {
     white-space: normal; /* 改行を有効にする */
     overflow-wrap: break-word; /* コンテンツがはみ出る場合に改行 */
     word-break: normal; /* 自然な単語区切り */
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .p-creator {
-    margin-top: 80px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.8;
 }
 
 .hero-section {
@@ -99,9 +111,18 @@ button.active {
     }
 
     h1 {
-        font-size: 1.3rem; /* スマホ用タイトルサイズ調整 */
-        /*margin-bottom: 15px; /* タイトルとカード間の余白 */
+        font-size: 1.6rem; /* スマホ用タイトルサイズ調整 */
         word-break: break-word; /* 単語内でも改行可能に */
+    }
+
+    h2 {
+        font-size: 1.4rem; /* スマホ用タイトルサイズ調整 */
+        word-break: break-word; /* 単語内でも改行可能に */
+    }
+
+    p.subTitle {
+        font-size: 1.3rem;
+        font-weight: normal;
     }
 
     .selection {

@@ -4,7 +4,18 @@
 }
 
 .event-container p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+}
+
+.event-container .label {
+    font-size: 2.5rem; /* PCではh1サイズ */
+    font-weight: bold;
+    display: inline; /* 改行させない */
+  }
+
+.event-container .amount {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 #insuranceMessage {
@@ -68,11 +79,16 @@
 
 @media (max-width: 767px) {
     .event-container h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .event-container .label {
-        display: block;
+        display: block; /* 改行させる */
+        font-size: 1.6rem; /* スマホ用フォント */
+    }
+
+    .event-container .amount {
+        font-size: 1.6rem;
     }
 
     .eventCard {

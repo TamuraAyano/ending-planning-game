@@ -26,7 +26,6 @@
 }
 
 #care-cost-message {
-    font-size: 1.6rem;
     margin-top: 10px;
 }
 
@@ -44,7 +43,7 @@
 
 @media (max-width: 767px) {
     #care-title {
-        font-size: 2rem; /* スマホ用に文字バランス調整 */
+        font-size: 1.6rem; /* スマホ用に文字バランス調整 */
         margin-top: 20px;
     }
     #dice-image {
