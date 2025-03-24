@@ -29,6 +29,10 @@ p {
     font-weight: bold;
 }
 
+.p-creator {
+    margin-top: 80px;
+}
+
 .hero-section {
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
@@ -95,8 +99,8 @@ button.active {
     }
 
     h1 {
-        font-size: 1.4rem; /* スマホ用タイトルサイズ調整 */
-        margin-bottom: 15px; /* タイトルとカード間の余白 */
+        font-size: 1.3rem; /* スマホ用タイトルサイズ調整 */
+        /*margin-bottom: 15px; /* タイトルとカード間の余白 */
         word-break: break-word; /* 単語内でも改行可能に */
     }
 

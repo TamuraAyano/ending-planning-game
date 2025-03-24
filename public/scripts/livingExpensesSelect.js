@@ -89,3 +89,11 @@ if (selectedLivingExpenses) {
         setLivingExpensesAndNavigate(cardId, livingExpensesValues);
     });
 }
+
+// 夫婦の場合、タイトル直後に補足テキストを挿入する
+if (maritalStatus === "couple") {
+    const title = document.querySelector("h1");
+    const note = document.createElement("p");
+    note.textContent = "※夫婦の場合は月額2倍";
+    title.insertAdjacentElement("afterend", note);
+}
