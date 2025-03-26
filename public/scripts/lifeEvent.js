@@ -41,7 +41,8 @@ function getRandomEvent() {
 }
 
 function flipCard() {
-    eventCard.classList.add("flipped");
+    // 最初の回転（360 + 180 = 540度）
+    eventCard.classList.add("spinning");
 
     setTimeout(() => {
         let event = getRandomEvent();
@@ -130,7 +131,7 @@ function flipCard() {
                 window.location.href = "marriedSelectDisplay.html";
             }
         };
-    }, 1000);
+    }, 1100);
 }
 
 drawCardButton.addEventListener("click", () => {
