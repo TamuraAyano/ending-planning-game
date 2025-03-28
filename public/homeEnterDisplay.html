@@ -10,9 +10,11 @@
 <body>
 
     <div class="container dice-container">
-        <h1 id="care-title">介護が必要になりました!</h1>
-        <p id="care-cost-message" class="subTitle">サイコロを振って、介護場所を決めましょう</p>
-
+        <h1 id="care-title" class="mobile-break-title">介護が必要になりました!</h1>
+        <!-- スマホだけ改行するために span で分けてます。スペース発生防止のため改行しないで下さい。-->
+        <p id="care-cost-message" class="subTitle mobile-break-p">
+            <span class="break">サイコロを振って</span><span class="break">介護場所を決めましょう</span>
+        </p>
         <div class="dice-area">
             <img id="dice-image" src="/assets/dice1.png" alt="サイコロの目">
         </div>

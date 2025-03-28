@@ -84,7 +84,8 @@ document.getElementById("rollButton").addEventListener("click", function () {
 
             // 結果に応じてメッセージを変更
             if (diceNum === 1 || diceNum === 2) {
-                careTitle.textContent = '介護場所は「自宅」になりました！';
+                // スマホだけ改行したいため、spanを設定しています。
+                careTitle.innerHTML = '<span class="break">介護場所は</span><span class="break">「自宅」になりました！</span>';
                 localStorage.setItem("careLocation", "home");
 
                 // 老人ホーム入居費用を0円とする
@@ -106,8 +107,9 @@ document.getElementById("rollButton").addEventListener("click", function () {
                 localStorage.setItem("careLocation", "nursing_home");
                 setLivingExpenses(localStorage.getItem("careLocation"));
 
-                careTitle.textContent = '介護場所は「老人ホーム」になりました！';
-                careCostMessage.textContent = 'もう一度サイコロを振って、施設の種類を決めましょう。';
+                // スマホだけ改行したいため、spanを設定しています。
+                careTitle.innerHTML = '<span class="break">介護場所は</span><span class="break">「老人ホーム」になりました！</span>';
+                careCostMessage.innerHTML = '<span class="break">もう一度サイコロを振って</span><span class="break">施設の種類を決めましょう。</span>';
                 rollButton.textContent = 'もう一度サイコロを振る';
                 rollButton.onclick = rollSecondDice;
             }
@@ -128,7 +130,8 @@ document.getElementById("rollButton").addEventListener("click", function () {
             dice.src = `/assets/dice${diceNum}.png`;
 
             if (diceNum === 1) {
-                careTitle.textContent = '特別養護老人ホームへの入居が決定しました！';
+                // スマホだけ改行したいため、spanを設定しています。
+                careTitle.innerHTML = '<span class="break">特別養護老人ホームへの</span><span class="break">入居が決定しました！</span>';
                 // 老人ホーム入居費用を0円とする
                 let financialData = JSON.parse(localStorage.getItem("financialData")) || {};
                 financialData["90代"].homeCost = 0;
@@ -140,8 +143,9 @@ document.getElementById("rollButton").addEventListener("click", function () {
                 rollButton.classList.add("hidden");
 
             } else {
-                careTitle.textContent = '有料老人ホームへの入居が決定しました！';
-                careCostMessage.textContent = '希望するサービス水準を選択してください';
+                // スマホだけ改行したいため、spanを設定しています。
+                careTitle.innerHTML = '<span class="break">有料老人ホームへの</span><span class="break">入居が決定しました！</span>';
+                careCostMessage.innerHTML = '<span class="break">希望するサービス水準を</span><span class="break">選択してください</span>';
 
                 // サイコロコンテンツを削除（画面から消す）
                 const diceContainer = document.querySelector(".dice-area");
